@@ -1,0 +1,36 @@
+body {background-color:lightBlue;}
+
+h1{
+  font-family:courier;
+  color:blue;
+  text-align: center;
+  }
+
+h3{
+  font-family:courier;
+  color:rgb(5, 48, 77); 
+  text-align: center;
+}
+
+p{
+  font-family:courier;
+  color: rgb(5, 48, 77);
+}
+
+img {
+  border: 3px solid darkblue;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+iframe {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a{
+  display: block;
+  text-align: center;
+}
