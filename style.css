@@ -1,0 +1,146 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
+  text-align: center;
+  min-height: 100vh;
+}
+
+/* Fade-in effect */
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease-in-out; /* Smooth fade-in effect */
+}
+
+.fade-in-visible {
+  opacity: 1;
+}
+
+/* Ensure the header is positioned relative to its container */
+header {
+  position: relative;
+  background: #333;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Position the logo in the top-left corner */
+.logo-container {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 10; /* Ensures the logo stays above other content */
+}
+
+.logo {
+  width: 50px; /* Adjust the size of your logo */
+  height: auto;
+}
+
+/* Navbar and other header content adjustments */
+.navbar {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+section {
+  padding: 40px 20px;
+}
+
+section h1 {
+  margin-bottom: 20px;
+  font-size: 2.5em;
+  color: #444;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+/* Make sure the projects container always has two columns */
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  gap: 20px;
+  justify-content: center;
+}
+
+.project {
+  padding: 20px;
+  color: #333;
+  font-size: 1.2em;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.project a {
+  text-decoration: none; /* Remove underline from links */
+  color: inherit; /* Make sure the text color is inherited */
+}
+
+.project-image {
+  width: 100%; /* Makes the image fit the width of the project box */
+  height: auto; /* Keeps the image aspect ratio */
+  border-radius: 5px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow (optional) */
+}
+
+/* Keep hover effect for the project box */
+.project:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+/* Responsive layout for smaller screens (1 column for mobile/tablet) */
+@media (max-width: 768px) {
+  .projects-container {
+    grid-template-columns: 1fr; /* Single column for smaller screens */
+  }
+}
+
+section#contact p {
+  margin: 10px 0;
+}
+
+section#contact a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+section#contact a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  padding: 10px 0;
+  background: #333;
+  color: #fff;
+  margin-top: 20px;
+}
