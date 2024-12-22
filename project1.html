@@ -13,7 +13,9 @@
   <!-- Header Section -->
   <header>
     <div class="logo-container">
-      <img src="LogoMT.png" alt="Logo" class="logo">
+      <a href="index.html">
+        <img src="LogoMT.png" alt="Logo">
+      </a>
     </div>
     <h1>Engineering Portfolio</h1>
     <nav>
@@ -25,16 +27,37 @@
     </nav>
   </header>
 
-  <!-- Project Content Section -->
-  <section id="project">
-    <h1>Project 1</h1>
-    <div class="project-content">
-      <img src="project1-image.jpg" alt="Project 1 Image" class="project-image">
-      <p>This is the detailed description of Project 1. Here you can explain the technologies used, the goals of the project, challenges faced, and any results achieved.</p>
-    </div>
-  </section>
+  
+  <main>
+    <section id="project">
+      <h1>Project 1</h1>
+      </section>
+    <section class="project-grid">
+      <div class="grid-item image">
+        <img src="project1-image.jpg" alt="Project 1 Image" class="project-image">
+      </div>
+      <div class="grid-item text">
+        <p>I conceptualized and developed a high-precision 3-axis robotic arm using SolidWorks, demonstrating advanced proficiency in CAD modeling and mechanical engineering. The arm was meticulously designed to perform precise movements and object manipulation, making it adaptable to a wide range of applications. Leveraging 3D printing technology, I fabricated each component with exceptional attention to detail, ensuring structural integrity, dimensional accuracy, and smooth assembly.</p>
+      </div>
+      <div class="grid-item text">
+        <p>To bring the arm to life, I implemented an Arduino-based control system, integrating servo motors to achieve accurate and responsive motion. The electrical wiring and programming were carefully executed to enable seamless operation and precise control. This project reflects a comprehensive skill set, merging mechanical design, prototyping, and embedded systems engineering to create a functional and innovative robotic solution.</p>
+      </div>
+      <div class="grid-item image">
+        <img src="arm.gif" alt="Project Image 2">
+      </div>
+    </section>
 
-  <!-- Footer Section -->
+    <section class="skills-section">
+      <h2>Top Skills Used</h2>
+      <div class="skills-grid">
+        <div class="skill-item">Solidworks Design</div>
+        <div class="skill-item">Arduino electrical wiring</div>
+        <div class="skill-item">C++ based programming</div>
+        <div class="skill-item">3D printing and manufacturing</div>
+      </div>
+    </section>
+  </main>
+
   <footer>
     <p>&copy; 2024 My Name</p>
   </footer>
