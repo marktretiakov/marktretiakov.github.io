@@ -13,7 +13,9 @@
   <!-- Header Section -->
   <header>
     <div class="logo-container">
-      <img src="LogoMT.png" alt="Logo" class="logo">
+      <a href="index.html">
+        <img src="LogoMT.png" alt="Logo">
+      </a>
     </div>
     <h1>Engineering Portfolio</h1>
     <nav>
@@ -25,16 +27,37 @@
     </nav>
   </header>
 
-  <!-- Project Content Section -->
-  <section id="project">
-    <h1>Project 1</h1>
-    <div class="project-content">
-      <img src="project2-image.jpg" alt="Project 1 Image" class="project-image">
-      <p>This is the detailed description of Project 1. Here you can explain the technologies used, the goals of the project, challenges faced, and any results achieved.</p>
-    </div>
-  </section>
 
-  <!-- Footer Section -->
+  <main>
+    <section id="project">
+      <h1>Project 2</h1>
+      </section>
+    <section class="project-grid">
+      <div class="grid-item image">
+        <img src="project2-image.jpg" alt="Project 1 Image" class="project-image">
+      </div>
+      <div class="grid-item text">
+        <p>I developed an autonomous delivery robot using LEGO Mindstorms EV3, designed to operate efficiently and autonomously in fulfillment environments. The robot is capable of loading, sorting, and delivering packages with minimal human intervention. It uses a color sensor to identify and sort packages into separate compartments, while a lifting mechanism ensures accurate placement onto the robot. The loading phase is completed autonomously, with the robot returning to its starting position after each package is secured.</p>
+      </div>
+      <div class="grid-item text">
+        <p>The robot employs advanced routing techniques, including Proportional Derivative (PD) line-following, using two color sensors to navigate accurately along predefined paths. Upon reaching designated offloading zones, the robot detects color-coded markers and automatically executes delivery. Built with error-handling features, including an emergency stop sensor and user input options for repeating or shutting down operations, the robot adapts to various conditions. Originally conceived as a basic line-following machine, the project evolved into a fully autonomous system that showcases innovation in robotics, sensor integration, and autonomous delivery systems.</p>
+      </div>
+      <div class="grid-item image">
+        <img src="distrobot.gif" alt="Project Image 2">
+      </div>
+    </section>
+
+    <section class="skills-section">
+      <h2>Top Skills Used</h2>
+      <div class="skills-grid">
+        <div class="skill-item">Embedded Systems Programming with EV3 Firmware</div>
+        <div class="skill-item">Color and Touch Sensor Integration</div>
+        <div class="skill-item">Proportional Derivative (PD) Line Following Algorithms</div>
+        <div class="skill-item">Autonomous Delivery System Design</div>
+      </div>
+    </section>
+  </main>
+
   <footer>
     <p>&copy; 2024 My Name</p>
   </footer>
