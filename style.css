@@ -5,6 +5,12 @@
   box-sizing: border-box;
 }
 
+/* Base font size setup */
+html {
+  font-size: 16px; /* 1 rem = 16px */
+}
+
+/* Body styling */
 body {
   font-family: 'Helvetica Neue', Arial, sans-serif;
   line-height: 1.6;
@@ -12,6 +18,7 @@ body {
   background-color: #f4f4f4;
   text-align: center;
   min-height: 100vh;
+  font-size: 1rem; /* Base font size */
 }
 
 /* Header styling */
@@ -25,8 +32,45 @@ header {
 }
 
 header h1 {
-  font-size: 2.5em;
+  font-size: 2.5rem; /* Using rem for scalability */
   margin: 20px 0;
+}
+/* Logo Container Styling */
+.logo-container {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 10; /* Keeps the logo on top */
+}
+
+.logo-container a {
+  display: inline-block;
+  text-decoration: none; /* Removes underline */
+}
+
+/* Default logo size for larger screens */
+.logo-container img {
+  width: 80px;  /* Set a reasonable size for larger screens */
+  height: auto;
+}
+
+/* Smaller size for mobile screens */
+@media (max-width: 768px) {
+  .logo-container {
+    top: 10px;
+    left: 10px; /* Adjusted positioning for smaller screens */
+  }
+
+  .logo-container img {
+    width: 40px;  /* Reduce the logo size on smaller screens */
+    height: auto;
+  }
+}
+
+h1 {
+  margin: 0;
+  padding-left: 100px; /* Adjusted to prevent overlap with logo */
+  font-size: clamp(1.8rem, 5vw, 3rem);  /* Improved scaling for headings */
 }
 
 /* Fade-in effect */
@@ -67,117 +111,10 @@ header h1 {
   text-align: center; /* Ensures multi-line text is also centered */
 }
 
-/* Skills Section */
-.skills-section {
-  margin-top: 40px;
-  padding: 20px;
-}
-
-.skills-section h2 {
-  font-size: 2em;
-  background-color: #444;
-  color: #fff;
-  padding: 10px;
-  border-radius: 5px;
-  margin-bottom: 20px;
-}
-
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-}
-
-.skill-item {
-  display: flex;
-  justify-content: center; /* Centers text horizontally */
-  align-items: center; /* Centers text vertically */
-  text-align: center; /* Centers text across lines */
-  height: 100px; /* Set a height for the skill blocks */
-  background-color: #eaeaea; /* Background for visual clarity */
-  padding: 10px; /* Optional: Adjust as needed for spacing */
-  border-radius: 5px; /* Optional: Rounded corners */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  font-size: 1.2em; /* Increases font size (adjust as needed) */
-  font-weight: bold; /* Optional: Makes the text bold */
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .skill-item {
-    height: auto; /* Adjust height dynamically for smaller screens */
-  }
-}
-
-/* Logo styling */
-.logo-container {
-  position: absolute;
-  top: 20px;
-  left: 40px;
-  z-index: 10; /* Keeps the logo on top */
-}
-
-.logo-container a {
-  display: inline-block;
-  text-decoration: none; /* Removes underline */
-}
-
-/* Default logo size */
-.logo-container img {
-  width: 80px;  /* Set a reasonable size for larger screens */
-  height: auto;
-}
-
-/* Smaller size for mobile screens */
-@media (max-width: 768px) {
-  .logo-container img {
-    width: 25px;  /* Reduce the size for smaller screens */
-    height: auto;
-  }
-}
-
-h1 {
-  margin: 0;
-  padding-left: 80px; /* Ensures logo and title don't overlap */
-}
-
-/* Navbar styling */
-.navbar {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.navbar a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: bold;
-  font-size: 1.1em;
-}
-
-.navbar a:hover {
-  text-decoration: underline;
-}
-
-/* Section styling */
-section {
-  padding: 40px 20px;
-}
-
-section h1 {
-  margin-bottom: 20px;
-  font-size: 2.5em;
-  color: #444;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  text-align: center;
-}
-
 /* Projects grid layout */
 .projects-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   justify-content: center;
 }
@@ -185,7 +122,7 @@ section h1 {
 .project {
   padding: 20px;
   color: #333;
-  font-size: 1.2em;
+  font-size: 1.2rem; /* Scalable font size */
   text-align: center;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -201,7 +138,7 @@ section h1 {
   height: auto; /* Keeps the image aspect ratio */
   border-radius: 5px;
   margin-bottom: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow (optional) */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
 }
 
 /* Keep hover effect for the project box */
@@ -211,19 +148,113 @@ section h1 {
   transition: all 0.3s ease;
 }
 
-/* Responsive layout for smaller screens (1 column for mobile/tablet) */
+/* Skills Section */
+.skills-section {
+  margin-top: 40px;
+  padding: 20px;
+}
+
+.skills-section h2 {
+  font-size: 2.5rem; /* Scalable */
+  background-color: #444;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.skill-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100px;
+  background-color: #eaeaea;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
   .projects-container {
     grid-template-columns: 1fr; /* Single column for smaller screens */
   }
 
-  h1 {
-    padding-left: 0; /* Adjust title padding for smaller screens */
+  header h1 {
+    font-size: 2rem; /* Slightly smaller on mobile */
   }
 
-  .logo-container img {
-    width: 40px; /* Adjust logo size for smaller screens */
+  .project {
+    font-size: 1.1rem; /* Adjust font size */
   }
+
+  .skills-section h2 {
+    font-size: 2rem;
+  }
+
+  .skill-item {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 14px; /* Smaller base font size for very small screens */
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .skills-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .skill-item {
+    font-size: 1rem;
+  }
+}
+
+/* Navbar styling */
+.navbar {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+/* Section styling */
+section {
+  padding: 40px 20px;
+}
+
+section h1 {
+  margin-bottom: 20px;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  color: #444;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
 }
 
 /* Contact Section */
