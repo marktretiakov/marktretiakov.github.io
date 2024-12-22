@@ -14,6 +14,21 @@ body {
   min-height: 100vh;
 }
 
+/* Header styling */
+header {
+  position: relative;
+  background: #333;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  width: 100%;
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin: 20px 0;
+}
+
 /* Fade-in effect */
 .fade-in {
   opacity: 0;
@@ -24,31 +39,109 @@ body {
   opacity: 1;
 }
 
-/* Ensure the header is positioned relative to its container */
-header {
-  position: relative;
-  background: #333;
-  color: #fff;
-  padding: 10px 0;
-  text-align: center;
-  width: 100%;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+/* Grid for project details */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto auto;
+  gap: 20px;
+  padding: 20px;
 }
 
-/* Position the logo in the top-left corner */
+.grid-item {
+  padding: 10px;
+}
+
+.grid-item.image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* For text blocks in the project grid */
+.grid-item.text {
+  display: flex;
+  justify-content: center; /* Centers text horizontally */
+  align-items: center; /* Centers text vertically */
+  text-align: center; /* Ensures multi-line text is also centered */
+}
+
+/* Skills Section */
+.skills-section {
+  margin-top: 40px;
+  padding: 20px;
+}
+
+.skills-section h2 {
+  font-size: 2em;
+  background-color: #444;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.skill-item {
+  display: flex;
+  justify-content: center; /* Centers text horizontally */
+  align-items: center; /* Centers text vertically */
+  text-align: center; /* Centers text across lines */
+  height: 100px; /* Set a height for the skill blocks */
+  background-color: #eaeaea; /* Background for visual clarity */
+  padding: 10px; /* Optional: Adjust as needed for spacing */
+  border-radius: 5px; /* Optional: Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  font-size: 1.2em; /* Increases font size (adjust as needed) */
+  font-weight: bold; /* Optional: Makes the text bold */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .skill-item {
+    height: auto; /* Adjust height dynamically for smaller screens */
+  }
+}
+
+/* Logo styling */
 .logo-container {
   position: absolute;
-  top: 10px;
-  left: 10px;
-  z-index: 10; /* Ensures the logo stays above other content */
+  top: 20px;
+  left: 40px;
+  z-index: 10; /* Keeps the logo on top */
 }
 
-.logo {
-  width: 50px; /* Adjust the size of your logo */
+.logo-container a {
+  display: inline-block;
+  text-decoration: none; /* Removes underline */
+}
+
+/* Default logo size */
+.logo-container img {
+  width: 80px;  /* Set a reasonable size for larger screens */
   height: auto;
 }
 
-/* Navbar and other header content adjustments */
+/* Smaller size for mobile screens */
+@media (max-width: 768px) {
+  .logo-container img {
+    width: 25px;  /* Reduce the size for smaller screens */
+    height: auto;
+  }
+}
+
+h1 {
+  margin: 0;
+  padding-left: 80px; /* Ensures logo and title don't overlap */
+}
+
+/* Navbar styling */
 .navbar {
   list-style: none;
   display: flex;
@@ -67,6 +160,7 @@ header {
   text-decoration: underline;
 }
 
+/* Section styling */
 section {
   padding: 40px 20px;
 }
@@ -80,7 +174,7 @@ section h1 {
   text-align: center;
 }
 
-/* Make sure the projects container always has two columns */
+/* Projects grid layout */
 .projects-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* Two columns */
@@ -122,8 +216,17 @@ section h1 {
   .projects-container {
     grid-template-columns: 1fr; /* Single column for smaller screens */
   }
+
+  h1 {
+    padding-left: 0; /* Adjust title padding for smaller screens */
+  }
+
+  .logo-container img {
+    width: 40px; /* Adjust logo size for smaller screens */
+  }
 }
 
+/* Contact Section */
 section#contact p {
   margin: 10px 0;
 }
@@ -143,4 +246,54 @@ footer {
   background: #333;
   color: #fff;
   margin-top: 20px;
+}
+
+/* For Project Page 4 (Target only Project Page 4) */
+
+/* Specific styles for project grid */
+#project-page-4 .project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto auto;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Modify top-left block to hold two images */
+#project-page-4 .grid-item.double-images {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+#project-page-4 .image-container {
+  display: flex;
+  gap: 10px;
+}
+
+#project-page-4 .project-image {
+  width: 45%; /* Ensures images are sized correctly */
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments for Project Page 4 */
+@media (max-width: 768px) {
+  /* Adjust the layout for smaller screens */
+  #project-page-4 .grid-item.double-images {
+    grid-column: span 2;
+    justify-content: center; /* Centers the images when they span the full width */
+  }
+
+  #project-page-4 .image-container {
+    flex-direction: column; /* Stack images vertically on smaller screens */
+    align-items: center; /* Center the images */
+  }
+
+  #project-page-4 .project-image {
+    width: 80%; /* Adjust width to fit on small screens */
+    margin-bottom: 10px; /* Adds space between images */
+  }
 }
