@@ -32,8 +32,11 @@ header {
 }
 
 header h1 {
-  font-size: 2.5rem; /* Using rem for scalability */
-  margin: 20px 0;
+  font-size: 2.5em;
+  margin: 0 auto;
+  padding: 0; /* Remove any unintended padding */
+  text-align: center; /* Ensures it is centered */
+  position: relative; /* Ensures positioning doesn't conflict */
 }
 /* Logo Container Styling */
 .logo-container {
@@ -249,12 +252,12 @@ section {
 }
 
 section h1 {
-  margin-bottom: 20px;
-  font-size: clamp(2rem, 5vw, 3.5rem);
+  
+  position: relative;
   color: #444;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  padding: 10px 0;
   text-align: center;
+  width: 100%;
 }
 
 /* Contact Section */
