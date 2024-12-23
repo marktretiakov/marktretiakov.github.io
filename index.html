@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Engineering Portfolio</title>
       <link rel="stylesheet" href="style.css">
       <!-- Add the favicon -->
-      <link rel="icon" href="images/LogoMT.png" type="image/png">
+      <link rel="icon" href="LogoMT.png" type="image/png">
   </head>
 <body>
   <header>
     <div class="logo-container">
       <a href="index.html">
-        <img src="images/LogoMT.png" alt="Logo">
+        <img src="LogoMT.png" alt="Logo">
       </a>
     </div>
     <h1>Engineering Portfolio</h1>
@@ -38,32 +40,32 @@
       <!-- Project 1 -->
       <div class="project fade-in" style="background-color: coral;">
         <a href="project1.html">
-          <img src="images/project1-image.jpg" alt="Project 1 Image" class="project-image">
-          <p>Project 1: Description</p>
+          <img src="project1-image.jpg" alt="Project 1 Image" class="project-image">
+          <p>Robotic Arm</p>
         </a>
       </div>
 
       <!-- Project 2 -->
       <div class="project fade-in" style="background-color: lightblue;">
         <a href="project2.html">
-          <img src="images/project2-image.jpg" alt="Project 2 Image" class="project-image">
-          <p>Project 2: Description</p>
+          <img src="project2-image.jpg" alt="Project 2 Image" class="project-image">
+          <p>Distribution Robot</p>
         </a>
       </div>
 
       <!-- Project 3 -->
       <div class="project fade-in" style="background-color: lightgreen;">
         <a href="project3.html">
-          <img src="images/project3-image.jpg" alt="Project 3 Image" class="project-image">
-          <p>Project 3: Description</p>
+          <img src="project3-image.jpg" alt="Project 3 Image" class="project-image">
+          <p>First Robotics Competiton</p>
         </a>
       </div>
 
       <!-- Project 4 -->
       <div class="project fade-in" style="background-color: lightpink;">
         <a href="project4.html">
-          <img src="images/project4-image.jpg" alt="Project 4 Image" class="project-image">
-          <p>Project 4: Description</p>
+          <img src="project4-image.jpg" alt="Project 4 Image" class="project-image">
+          <p>Formula Electric</p>
         </a>
       </div>
     </div>
@@ -71,14 +73,22 @@
 
   <section id="contact" class="fade-in">
     <h1>Contact</h1>
-    <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/" target="_blank">Visit my LinkedIn</a></p>
+    <div class="contact-details">
+      <!-- Font Awesome Email Icon -->
+      <a href="mailto:mtretiakov23@gmail.com">
+        <i class="fas fa-envelope contact-logo"></i>
+      </a>
+
+      <!-- Font Awesome LinkedIn Icon -->
+      <a href="https://www.linkedin.com/in/mark-tretiakov-520548302/">
+        <i class="fab fa-linkedin contact-logo"></i>
+      </a>
+    </div>
   </section>
 
+  <script src="script.js"></script> <!-- Ensure the correct script file is linked -->
   <footer>
     <p>&copy; 2024 Mark Tretiakov</p>
   </footer>
-
-  <script src="script.js"></script> <!-- Ensure the correct script file is linked -->
 </body>
 </html>
