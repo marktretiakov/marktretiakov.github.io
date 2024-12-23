@@ -23,12 +23,15 @@ body {
 
 /* Header styling */
 header {
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   background: #333;
   color: #fff;
   padding: 10px 0;
   text-align: center;
   width: 100%;
+  
 }
 
 header h1 {
@@ -86,6 +89,14 @@ h1 {
   opacity: 1;
 }
 
+/* About Section Paragraph */
+#about .about-content p {
+  font-size: clamp(1rem, 2.5vw, 1.7rem); /* Dynamic font size for About section */
+  line-height: 1.6; /* Adjust line height for readability */
+  color: #333; /* Text color */
+  text-align: center; /* Center align the text */
+  margin: 20px 0; /* Add spacing around the paragraph */
+}
 /* Grid for project details */
 .project-grid {
   display: grid;
@@ -111,8 +122,12 @@ h1 {
   display: flex;
   justify-content: center; /* Centers text horizontally */
   align-items: center; /* Centers text vertically */
-  text-align: center; /* Ensures multi-line text is also centered */
+  font-size: clamp(1rem, 2.5vw, 1.5rem); /* Dynamic font size for project description paragraphs */
+  line-height: 1.6; /* Adjust line height for readability */
+  color: #333; /* Text color */
+  margin-bottom: 20px; /* Add spacing between paragraphs */
 }
+
 
 /* Projects grid layout */
 .projects-container {
@@ -130,6 +145,15 @@ h1 {
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+
+.project p {
+  font-size: clamp(1.4rem, 2.5vw, 2rem); /* Dynamically adjusts font size */
+  font-weight: bold; /* Make titles stand out */
+  margin-top: 10px; /* Space between the image and text */
+  text-align: center; /* Center-align the text */
+  color: #333; /* Adjust text color */
+}
+
 
 .project a {
   text-decoration: none; /* Remove underline from links */
@@ -240,6 +264,8 @@ h1 {
   color: #fff;
   font-weight: bold;
   font-size: 1.1rem;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+
 }
 
 .navbar a:hover {
@@ -252,27 +278,40 @@ section {
 }
 
 section h1 {
-  
   position: relative;
   color: #444;
   padding: 10px 0;
   text-align: center;
   width: 100%;
+  font-size: clamp(1.5rem, 5vw, 3rem); 
 }
 
-/* Contact Section */
-section#contact p {
-  margin: 10px 0;
+
+/* Contact Section Styling */
+section#contact {
+  padding: 40px 20px;
+  color: #333;
+  text-align: center; /* Centers the content */
 }
 
-section#contact a {
-  color: #007BFF;
-  text-decoration: none;
+section#contact .contact-details {
+  display: flex;
+  justify-content: center; /* Centers logos horizontally */
+  gap: 70px; /* Spacing between the logos */
+  margin-top: 5px;
 }
 
-section#contact a:hover {
-  text-decoration: underline;
+section#contact .contact-logo {
+  font-size: clamp(2rem, 8vw, 5rem);  /* Dynamic font size based on viewport */
+  color: #333; /* Default color, adjust as needed */
+  transition: transform 0.3s ease; /* Smooth scaling effect */
 }
+
+section#contact .contact-logo:hover {
+  transform: scale(1.4); /* Scale up on hover */
+}
+
+
 
 footer {
   text-align: center;
