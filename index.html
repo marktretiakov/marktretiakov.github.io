@@ -1,92 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Engineering Portfolio</title>
       <link rel="stylesheet" href="style.css">
+
       <!-- Add the favicon -->
-      <link rel="icon" href="images/LogoMT.png" type="image/png">
+      <link rel="icon" href="LogoMT.png" type="image/png">
   </head>
 <body>
+  <!-- Header Section -->
   <header>
     <div class="logo-container">
       <a href="index.html">
-        <img src="images/LogoMT.png" alt="Logo">
+        <img src="LogoMT.png" alt="Logo">
       </a>
     </div>
     <h1>Engineering Portfolio</h1>
     <nav>
       <ul class="navbar">
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="index.html">About</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <section id="about" class="fade-in">
-    <h1>About Me</h1>
-    <div class="about-content">
-      <p>My name is Mark Tretiakov and I am a Mechatronics Engineering student at the University of Waterloo, passionate about integrating mechanical, electrical, and software systems to create innovative solutions. With hands-on experience in 3D modeling, programming, and robotics, I have developed strong problem-solving skills and a collaborative approach to project management. I thrive in environments that challenge me to apply my technical knowledge while continuously learning and growing. My goal is to contribute to projects that push the boundaries of technology and engineering, while gaining valuable industry experience.</p>
-    </div>
-  </section>
-
-  <section id="projects" class="fade-in">
-    <h1>Projects</h1>
-    <div class="projects-container">
-      <!-- Project 1 -->
-      <div class="project fade-in" style="background-color: coral;">
-        <a href="project1.html">
-          <img src="images/project1-image.jpg" alt="Project 1 Image" class="project-image">
-          <p>Robotic Arm</p>
-        </a>
+  <main>
+    <section id="project">
+      <h1>Jet Turbine Assembly</h1>
+    </section>
+    <section class="project-grid">
+      <div class="grid-item image">
+        <img src="Jet_Turbine_Screenshot.png" alt="Project 5 Image" class="project-image">
       </div>
-
-      <!-- Project 2 -->
-      <div class="project fade-in" style="background-color: lightblue;">
-        <a href="project2.html">
-          <img src="images/project2-image.jpg" alt="Project 2 Image" class="project-image">
-          <p>Distribution Robot</p>
-        </a>
+      <div class="grid-item text">
+        <p>I designed and assembled a detailed jet turbine model using SolidWorks, showcasing advanced proficiency in CAD modeling and mechanical engineering principles. The project involved creating intricate components and ensuring precise alignment and functionality within the assembly.</p>
       </div>
-
-      <!-- Project 3 -->
-      <div class="project fade-in" style="background-color: lightgreen;">
-        <a href="project3.html">
-          <img src="images/project3-image.jpg" alt="Project 3 Image" class="project-image">
-          <p>First Robotics Competiton</p>
-        </a>
+      <div class="grid-item text">
+        <p>This project required meticulous attention to detail and a strong understanding of mechanical design principles. The final assembly was validated through simulations, demonstrating its structural integrity and accurate representation of a real-world jet turbine.</p>
+       
       </div>
-
-      <!-- Project 4 -->
-      <div class="project fade-in" style="background-color: lightpink;">
-        <a href="project4.html">
-          <img src="images/project4-image.jpg" alt="Project 4 Image" class="project-image">
-          <p>Formula Electric</p>
-        </a>
+      <div class="grid-item image">
+        <img src="Jet_Turbine_Assembly_Drawing_Screenshot.png" alt="Project 5 Image 2">
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="contact" class="fade-in">
-    <h1>Contact</h1>
-    <div class="contact-details">
-      <!-- Font Awesome Email Icon -->
-      <a href="mailto:mtretiakov23@gmail.com">
-        <i class="fas fa-envelope contact-logo"></i>
-      </a>
+    <section class="skills-section">
+      <h2>Top Skills Used</h2>
+      <div class="skills-grid">
+        <div class="skill-item">SolidWorks CAD Modeling</div>
+        <div class="skill-item">Mechanical Engineering</div>
+        <div class="skill-item">3D Modeling</div>
+        <div class="skill-item">Simulation and Validation</div>
+      </div>
+    </section>
+  </main>
 
-      <!-- Font Awesome LinkedIn Icon -->
-      <a href="https://www.linkedin.com/in/mark-tretiakov-520548302/">
-        <i class="fab fa-linkedin contact-logo"></i>
-      </a>
-    </div>
-  </section>
-
-  <script src="script.js"></script> <!-- Ensure the correct script file is linked -->
   <footer>
     <p>&copy; 2024 Mark Tretiakov</p>
   </footer>
